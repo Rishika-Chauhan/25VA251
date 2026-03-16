@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // function ... a javascript function is a rsuable block of code that performs a specific task. It can be defined once and called multiple times throughout the program.
+
+        // normal function without parameter
+        function demo(){
+            console.log("Hello, World!");
+        }
+        demo();
+
+        // function with parameter
+        function name(a){
+            console.log("Hello, " + a + "!");
+        }
+        name("Rishika");
+
+        // function with default parameter
+        function add(a,b=10){
+            console.log("addition of two numbers is:" + (a + b));
+        }
+        add(3);
+
+        // anonymous function...a function without a name. It is often used as a callback function or assigned to a variable. These functions are typically used in situations where a function is needed temporarily and does not require a name for reference.
+
+        let cal=function(){
+          var num1=5;
+          var num2=10;
+          var res=num1*num2;
+            console.log("The multiplication of two numbers is: " + res);
+        }
+        cal();
+
+        // arrow function... used in Es56 and later versions. It provides a more concise syntax for writing functions. Arrow functions are often used for shorter functions or when the function does not require its own 'this' context.
+
+        let division=(num1,num2)=>{
+            var num1=20;
+            var num2=5;
+            var res=num1/num2;
+            console.log("The division of two numbers is: " + res);
+        }
+        division();
+        // arrow function with single line statement
+
+        let msg = () => console.log("Hello ABES");
+
+
+        // calculator function
+        let calculator=(a,b)=>{
+            a= 15;
+            b=5;
+            console.log("The addition of two numbers is: "+ (a+b));
+            console.log("The subtraction of two numbers is: "+ (a-b));
+            console.log("The multiplication of two numbers is: "+ (a*b));
+            console.log("The division of two numbers is: "+ (a/b));
+        }
+        calculator();  
+        
+        // callback funtion... a function that is passed as an argument to another function and is executed after a certain event or condition is met. 
+        function subtract(){
+            var num1=20;
+            var num2=10;
+            var res=num1-num2;
+        }
+
+        function displayRes(){
+            console.log("the result is "+res)
+        }
+        subtract(displayRes);
+        // callback using Set Timeout Api
+
+        function msg1(){
+            console.log("Hello friend");
+        }
+        setTimeout(msg1,2000);
+    </script>
+</body>
+</html>
